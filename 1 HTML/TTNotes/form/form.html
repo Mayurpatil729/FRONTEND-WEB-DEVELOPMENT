@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!-- *------------------------------------- -->
 <!--* HTML FORM TAG  
 <!-- *---------------------------------------- -->
@@ -58,5 +60,63 @@ multiple options.
   <body>
     <h1>HTML FORM</h1>
     <!-- Add Form Here -->
+
+    <form>
+      <label for="fname">Enter your first name</label>
+      <input type="text" id="fname" name="fname" />
+      <br />
+
+      <label for="lname">Enter your last name</label>
+      <input type="text" id="lname" name="lname" />
+      <br />
+
+      <label for="email"> Enter your email </label>
+      <input type="email" id="email" />
+      <br />
+
+      <p>Choose your Favorite language</p>
+      <br />
+      <label for="html">HTML</label>
+      <input type="radio" id="html" name="Flanguage" value="HTML" />
+      <br />
+
+      <label for="html">CSS</label>
+      <input type="radio" id="html" name="Flanguage" value="CSS" />
+      <br />
+
+      <label for="html">Java</label>
+      <input type="radio" id="html" name="Flanguage" value="Java" />
+      <br />
+
+      <label for="html">C</label>
+      <input type="radio" id="html" name="Flanguage" value="C" />
+      <br />
+
+      <p>Choose your city</p>
+      <label for="city1">Mumbai</label>
+      <input type="checkbox" id="city1" name="city" value="Mumbai" />
+      <br />
+      <label for="city2">pune</label>
+      <input type="checkbox" id="city2" name="city" value="pune" />
+      <br />
+      <label for="city3">Dhule</label>
+      <input type="checkbox" id="city3" name="city" value="Dhule" />
+      <br />
+      <hr />
+
+      <p>Choose the cars</p>
+      <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+
+      <hr />
+      <br />
+      <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+      <hr />
+      <input type="submit" value="submit" />
+    </form>
   </body>
 </html>
