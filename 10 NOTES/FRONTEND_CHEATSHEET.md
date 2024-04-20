@@ -10,11 +10,12 @@
 
 1. Tinyhost
 2. WebintoApp.com
-3.
+3. Vercel
+4. netlify.com
 
 ### Icons
 
-1. flaticon.
+1. flaticon.s
 2.
 3.
 4.
@@ -31,3 +32,5 @@
 # Fonts
 
 1. Google Fonts
+
+1. https://caniuse.com/
