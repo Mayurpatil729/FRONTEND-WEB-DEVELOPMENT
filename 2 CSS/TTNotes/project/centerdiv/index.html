@@ -1,0 +1,69 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Center Div</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        background-color: green;
+
+        /* 1 st trick */
+        /* position: relative; */
+
+        /* 2 nd trick using flexbox */
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+
+        /* 3rd trick */
+        /* display: grid;
+        place-items: center; */
+
+        /* 4 th trick */
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        /* 5th trick */
+        /* display: flex; */
+      }
+
+      .child {
+        width: 400px;
+        height: 400px;
+        background-color: red;
+
+        color: aqua;
+        text-transform: uppercase;
+        font-size: 20px;
+
+        /* text center */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* 1 st trick */
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+
+        /* 5 the  */
+        /* margin: auto; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="child">Center text</div>
+  </body>
+</html>
