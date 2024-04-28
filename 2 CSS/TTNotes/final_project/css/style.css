@@ -290,6 +290,10 @@ main {
 
   }
 
+  & .hero-btn .btn btn-white:hover{
+    color: #FFFFFF;
+  }
+
   & .hero-para {
     color: var(--white-color);
     margin: 2rem 0 4.2rem 0;
@@ -437,7 +441,7 @@ main {
   align-items: end;
   text-align: right;
 } 
-
+ 
  
 .common-text--highlight{
   width: 6rem;

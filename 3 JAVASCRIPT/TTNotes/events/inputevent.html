@@ -1,0 +1,99 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      /* width: 100vw; */
+      /* height: 100vh; */
+      gap: 2.4rem;
+      display: flex;
+      justify-content: center;
+      margin-top: 10rem;
+      background-color: rgb(179, 119, 119);
+    }
+
+    .inputValue,
+    .inputName,
+    .inputType,
+    .eventType {
+      color: #f5ee62;
+      margin-top: 2rem;
+      font-size: 2rem;
+    }
+
+    .output {
+      background-color: rgb(112, 3, 3);
+      padding: 2rem 2rem 2rem;
+    }
+
+    ::placeholder {
+      font-size: 2.2em; /* Change this value to increase or decrease the size */
+      color: #999; /* You can also change the color if needed */
+    }
+    input[type="text"] {
+      width: 300px; /* Change this value to increase or decrease the width */
+      height: 40px; /* Change this value to increase or decrease the height */
+      /* You can also adjust other properties like padding, border, etc. */
+      padding: 10px;
+      border: 1px solid rgb(16, 1, 1);
+      border-radius: 20px;
+      font-size: 16px;
+    }
+  </style>
+  <body>
+    <div>
+      <div class="output">
+        <input
+          type="text"
+          id="myInput"
+          name=" username"
+          placeholder="Type something..."
+          autocomplete="off"
+        />
+        <div class="inputValue">Input Value :</div>
+        <div class="inputName">Input name :</div>
+        <div class="inputType">Input type :</div>
+        <div class="eventType">Event Type :</div>
+      </div>
+    </div>
+
+    <script>
+      const inputElem = document.getElementById("myInput");
+
+      const handleInput = (event) => {
+        console.log(event);
+
+        console.log("Input value : ", event.target.value);
+        console.log("Input name : ", event.target.name);
+        console.log("Input type : ", event.inputType);
+        console.log("Event type : ", event.type);
+
+        document.querySelector(
+          ".inputValue"
+        ).textContent = `Input Value : ${event.target.value}`;
+
+        document.querySelector(
+          ".inputName"
+        ).textContent = ` Input Name : ${event.target.name}`;
+
+        document.querySelector(
+          ".inputType"
+        ).textContent = `Input Type : ${event.inputType}`;
+
+        document.querySelector(
+          ".eventType"
+        ).textContent = `Event Type : ${event.type}`;
+      };
+
+      inputElem.addEventListener("input", handleInput);
+      //   inputElem.addEventListener("change", handleInput);
+    </script>
+  </body>
+</html>
