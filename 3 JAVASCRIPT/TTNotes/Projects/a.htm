@@ -12,9 +12,11 @@
         padding: 0;
         box-sizing: border-box;
       }
+
       body {
         width: 100%;
         height: 100vh;
+        font-family: Arial, sans-serif;
         background-image: linear-gradient(
           to right top,
           #051937,
@@ -23,71 +25,47 @@
           #00bf72,
           #a8eb12
         );
-
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        color: #fff;
       }
 
       section {
         text-align: center;
         margin-bottom: 20px;
-        gap: 2.4rem;
-        align-items: center;
       }
 
-      .copyCode {
-        padding: 10px;
-        background-color: rgba(255, 255, 255, 0.8);
+      button {
         border-radius: 5px;
-        word-wrap: break-word;
-        margin-top: 20px;
-        font-size: large;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
       }
 
       button:hover {
         background-color: rgba(0, 0, 0, 0.7);
       }
 
-      button {
-        border-color: black;
-        border-radius: 30px;
-        padding: 10px 20px;
-        margin: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        font-size: large;
-      }
-
-      #myButton {
-        background-color: rgb(168, 235, 18);
-        color: rgb(34, 34, 34);
-        box-shadow: 10px 10px 14px 1px rgba(00, 00, 00, 0.2);
-      }
-
-      #myButton2 {
-        background-color: rgb(168, 235, 18);
-        color: rgb(34, 34, 34);
-        box-shadow: 10px 10px 14px 1px rgba(00, 00, 00, 0.2);
-      }
-
-      .msg {
-        color: aliceblue;
-        margin-top: 5%;
+      .copyCode {
       }
     </style>
   </head>
   <body>
     <section>
       <div>
-        <button id="myButton">#2C4E80</button>
+        <button id="myButton">#051937</button>
+        <span style="margin: 0 10px"></span>
         <button id="myButton2">#008793</button>
       </div>
-      <div class="msg"><h2>Copy your code here</h2></div>
-
+      <h2 style="margin-top: 20px">Copy your code here</h2>
       <div class="copyCode">
-        background-image:linear-gradient(to right , rgb(92,145,229)
-        ,rgb(152,63,198))
+        background-image: linear-gradient(to right, rgb(92, 145, 229), rgb(152,
+        63, 198));
       </div>
     </section>
 
@@ -102,7 +80,7 @@
         let myHexValues = "0123456789abcdef";
         let colors = "#";
         for (let i = 0; i < 6; i++) {
-          colors = colors + myHexValues[Math.floor(Math.random() * 16)];
+          colors += myHexValues[Math.floor(Math.random() * 16)];
         }
         return colors;
       };
@@ -121,13 +99,11 @@
         copyDiv.innerText = `background-image: linear-gradient(to right, ${rgb1}, ${rgb2});`;
       };
 
-      // btn1.addEventListener("click", hexValues);
       btn1.addEventListener("click", handleButton1);
       btn2.addEventListener("click", handleButton2);
 
       copyDiv.addEventListener("click", () => {
         navigator.clipboard.writeText(copyDiv.innerText);
-        alert("Color is copied");
       });
     </script>
   </body>
