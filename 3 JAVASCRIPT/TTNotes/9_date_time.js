@@ -97,10 +97,10 @@
 //* JavaScript Set Date Methods / Setting Components:
 //* ===================================================
 
-// const date = new Date();
+const date = new Date();
 
 //? setFullYear(yearValue[, monthValue[, dayValue]]): Sets the full year for a specified date according to local time.
-// console.log(date);
+console.log(date);
 
 // date.setFullYear(2025);
 // console.log(date); // Date object with the year set to 2025
@@ -197,9 +197,9 @@
 //! 1: Write a function to add a specified number of days to a given date.
 
 // const addDaysToDate = (date, extraDay) => {
-//   //   console.log(date);
-//   //   console.log(date.setDate(date.getDate() + extraDay));
-//   //   console.log(new Date(1709769600000));
+//     console.log(date);
+//     console.log(date.setDate(date.getDate() + extraDay));
+//     console.log(new Date(1709769600000));
 //   let updatedDate = date.setDate(date.getDate() + extraDay);
 //   return new Date(updatedDate);
 // };

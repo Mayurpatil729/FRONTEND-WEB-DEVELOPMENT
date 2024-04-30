@@ -1,0 +1,51 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <br />
+    <form>
+      <div>
+        <input type="text" id="inputValue" />
+        <button class="btn">Add Todo</button>
+      </div>
+      <section class="todo-lists-elem">
+        <li></li>
+        <button class="deleteBtn">Delete</button>
+      </section>
+    </form>
+
+    <script>
+      const mainTodoElem = document.querySelector(".todo-lists-elem");
+      const inputValue = document.getElementById("inputValue");
+      let localTodoLists = [];
+
+      const addTodoList = (e) => {
+        e.preventDefault();
+
+        const todoListValue = inputValue.value.trim();
+
+        localTodoLists.push(todoListValue);
+        console.log(localTodoLists);
+
+        const div = document.createElement("div");
+        divElement.classList.add("main_todo_div");
+        divElement.innerHTML = `<li>${inputValue.value}</li>
+      <button class="deleteBtn">Delete</button>`;
+        mainTodoElem.append(divElement);
+      };
+
+      document.querySelector(".btn").addEventListener("click", (e) => {
+        addTodoList(e);
+      });
+    </script>
+  </body>
+</html>
