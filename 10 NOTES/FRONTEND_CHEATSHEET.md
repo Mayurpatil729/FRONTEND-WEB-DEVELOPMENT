@@ -34,3 +34,4 @@
 1. Google Fonts
 
 1. https://caniuse.com/
+1. font awesome
